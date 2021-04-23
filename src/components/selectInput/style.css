@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.container select {
+  background-color: rgb(234, 243, 242);
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 60%;
+}

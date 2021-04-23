@@ -2,9 +2,12 @@
   box-sizing: border-box;
 }
 
-.flexCentered{
+main {
+  padding: 2vh 0;
+}
+
+.flexCentered {
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }

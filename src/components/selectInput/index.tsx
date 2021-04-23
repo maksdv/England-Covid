@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css';
 
 type TypeSelectInput = {
   select: any;
@@ -11,13 +12,15 @@ const SelectInput = ({ select, list, selected }: TypeSelectInput) => {
     select(value);
   };
   return (
-    <select id="options" onChange={(ev) => handleChange(ev.target.value)}>
-      {list.map((item) => (
-        <option key={item} value={item} selected={selected === item}>
-          {item}
-        </option>
-      ))}
-    </select>
+    <div className='container'>
+      <select id="options" onChange={(ev) => handleChange(ev.target.value)}>
+        {list.map((item) => (
+          <option key={item} value={item} selected={selected === item}>
+            {item}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 export default SelectInput;
