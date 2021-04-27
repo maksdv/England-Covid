@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { getCovidData } from "../../service/get";
-import { regions } from "../../utils/regionList";
+import { nations } from "../../utils/nationList";
 import ChartComponent from "../chart";
 import Error from "../common/error";
 import Loading from "../common/loading";
 import SelectInput from "../selectInput";
 
 const CovidData = () => {
-  const [selectedOption, setSelectedOption] = useState("London");
+  const [selectedOption, setSelectedOption] = useState("england");
   const { isLoading, error, data } = useQuery(["nation", selectedOption], () =>
     getCovidData(selectedOption)
   );
@@ -20,7 +20,7 @@ const CovidData = () => {
     <>
       <SelectInput
         select={setSelectedOption}
-        list={regions}
+        list={nations}
         selected={selectedOption}
       />
       <ChartComponent data={data} />
